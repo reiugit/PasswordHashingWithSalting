@@ -1,0 +1,33 @@
+@HostAddress = http://localhost:5127
+
+### 1.) Create password hash from password and store it in application memory.
+
+POST {{HostAddress}}/create-passwordhash/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "password": "password123"
+}
+
+### 2.) Verify with right password with the hash stored in application memory.
+
+POST {{HostAddress}}/verify-password/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "password": "password123"
+}
+
+### 3.) Verify with wrong password with the hash stored in application memory.
+
+POST {{HostAddress}}/verify-password/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "password": "wrong_password"
+}
+
+###
