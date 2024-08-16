@@ -7,5 +7,6 @@
 
 <pre>
   hashBytes = Rfc2898DeriveBytes.Pbkdf2(password, salt, iterations, hashAlgorithmName, hashSize);
+  
   hashString = Convert.ToHexString(hash);
 </pre>
