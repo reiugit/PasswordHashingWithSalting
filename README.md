@@ -6,7 +6,9 @@
 * HashAlgorithm = SHA512
 
 <pre>
+  salt = RandomNumberGenerator.GetBytes(saltSize);
+  
   hashBytes = Rfc2898DeriveBytes.Pbkdf2(password, salt, iterations, hashAlgorithmName, hashSize);
   
-  hashString = Convert.ToHexString(hash);
+  hashString = Convert.ToHexString(hashBytes);
 </pre>
